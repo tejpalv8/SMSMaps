@@ -9,5 +9,7 @@ We Used Twilio to create a workflow between a user’s phone (SMS), a program th
 
 # Authors
 John Guibas (jtgg01@gmail.com)
+#
 Tejpal Virdi (tejpalv8@gmail.com)
+#
 Peter Li (peter.li.s93@gmail.com)
