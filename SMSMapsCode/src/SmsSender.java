@@ -38,7 +38,7 @@ public class SmsSender {
        String StartLoc = "a";
         String EndLoc = "a";
         
-        while(StartLoc == "a" || EndLoc == "a"){
+       while(StartLoc == "a" || EndLoc == "a"){
         	
         	
         ResourceSet<Message> messages = Message.reader().read();
@@ -47,14 +47,14 @@ public class SmsSender {
         
 
         
-        if(current.getBody().toString().toLowerCase().startsWith("start at ")){
+        if(current.getBody().toString().toLowerCase().startsWith("start at ") || current.getBody().toString().toLowerCase().startsWith("Start at ") || current.getBody().toString().toLowerCase().startsWith("start At ") || current.getBody().toString().toLowerCase().startsWith("Start At ")){
      	   //System.out.println("it worked!");
-     	   StartLoc = current.getBody().toString().substring(9);
+     	   StartLoc = current.getBody().toString().substring(9).toLowerCase();
         }
         
-        if(current.getBody().toString().toLowerCase().startsWith("go to ")){
+        if(current.getBody().toString().toLowerCase().startsWith("go to ")|| current.getBody().toString().toLowerCase().startsWith("Go to ") || current.getBody().toString().toLowerCase().startsWith("go To ") || current.getBody().toString().toLowerCase().startsWith("Go To ")){
      	   //System.out.println("it worked!");
-     	   EndLoc = current.getBody().toString().substring(6);
+     	   EndLoc = current.getBody().toString().substring(6).toLowerCase();
         }
         
         System.out.println(current.getBody().toString());
